@@ -1,0 +1,53 @@
+asgiref==3.8.1
+Django==5.0.3
+django-filter==24.1
+djangorestframework==3.15.1
+Markdown==3.6
+sqlparse==0.4.4
+tzdata==2024.1
+
+
+homepage
+URL: /
+Method: GET
+Description: Renders the homepage template.
+
+vendor_performance
+URL: /api/vendor/<vendor_id>/performance/
+Method: GET
+Description: Retrieves performance metrics for a specific vendor.
+Parameters:
+vendor_id: The unique identifier of the vendor.
+
+acknowledge_purchase_order
+URL: /api/purchase-order/<po_id>/acknowledge/
+Method: POST
+Description: Acknowledges a purchase order and updates the acknowledgment date.
+Parameters:
+po_id: The unique identifier of the purchase order.
+
+API Endpoints
+VendorListCreateAPIView
+URL: /api/vendors/
+Method: GET, POST
+Description: Lists all vendors or creates a new vendor.
+
+VendorRetrieveUpdateDestroyAPIView
+URL: /api/vendors/<vendor_id>/
+Method: GET, PUT, PATCH, DELETE
+Description: Retrieves, updates, or deletes a specific vendor.
+Parameters:
+vendor_id: The unique identifier of the vendor.
+
+PurchaseOrderListCreateAPIView
+URL: /api/purchase-orders/
+Method: GET, POST
+Description: Lists all purchase orders or creates a new purchase order.
+
+PurchaseOrderRetrieveUpdateDestroyAPIView
+URL: /api/purchase-orders/<po_id>/
+Method: GET, PUT, PATCH, DELETE
+Description: Retrieves, updates, or deletes a specific purchase order.
+Parameters:
+po_id: The unique identifier of the purchase order.
+
